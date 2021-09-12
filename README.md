@@ -1,5 +1,3 @@
-\< TOC goes here. Generate one at: https://ecotrust-canada.github.io/markdown-toc/ \>
-
 # DIFFUSER v0.1.0
 _**Categories:** reverb, meta-plugin_
 
