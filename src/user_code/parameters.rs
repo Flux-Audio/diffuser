@@ -9,7 +9,19 @@ pub fn create_parameters() -> ParameterManager {
     
     let parameters = vec![
         Parameter {
-            display_name: Mutex::new("test_param".to_string()),
+            display_name: Mutex::new("length".to_string()),
+            ..Default::default()
+        },
+        Parameter {
+            display_name: Mutex::new("crossover".to_string()),
+            ..Default::default()
+        },
+        Parameter {
+            display_name: Mutex::new("feedback".to_string()),
+            ..Default::default()
+        },
+        Parameter {
+            display_name: Mutex::new("dry/wet".to_string()),
             ..Default::default()
         },
     ];

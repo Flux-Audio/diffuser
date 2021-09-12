@@ -1,15 +1,7 @@
 \< TOC goes here. Generate one at: https://ecotrust-canada.github.io/markdown-toc/ \>
 
-# \< PLUGIN_NAME \> \< semVer number goes here\>
-***Categories:** \< categories go here, i.e. meta-plugin \>*
-
-## Update Notice
-Version \< current semVer \> is incompatible with \< last incompatible semVer \>! Presets cannot be ported. Make sure to
-backup any old instances of \< last incompatible semVer \> if you don't want your projects to break.
-
-\< short update description \>
-
-A full changelist is at the bottom of this document.
+# DIFFUSER v0.1.0
+_**Categories:** reverb, meta-plugin_
 
 ## Installation
 _**Disclaimer:** this plugin will only work on 64-bit windows machines!_ \
@@ -18,32 +10,21 @@ Previous versions of the plugin are also available, in case you need them.
 
 ## Compiling The Source Code
 _**Note:** you don't need to compile the source code if you just want to use the plugin, just download the `.dll`._ \
-Make sure you have Cargo installed on your computer (the Rust compiler). Then in the root of the repository run `cargo build`. Once Cargo is done building, there should be a `HYSTERESIS_v0_3_0.dll` file in the newly created `debug/` directory. Place this file into your DAW's VST folder.
+Make sure you have Cargo installed on your computer (the Rust compiler). Then in the root of the repository run `cargo build`. Once Cargo is done building, there should be a `DIFFUSER_v0_1_0.dll` file in the newly created `debug/` directory. Place this file into your DAW's VST folder.
 
-# What is \< PLUGIN_NAME \>?
-\< medium description goes here \>
+# What is DIFFUSER?
+DIFFUSER is a TDL (tapped delay line) unity gain diffuser (a diffuser which can be fed back in a stable manner) which is a component in the making of digital reverbs. This plugin is a proof-of-concept to show off some of the technology I'm developing for an upcoming plugin (a room reverb mixed with an extended Karplus-Strong resonator).
+
+Essentially a diffuser is the simplest form of reverberation possible: a bank of dozens of delays, with pseudo-random lengths (actually they are chosen as to minimize metallic resonances between delay taps). Here each stereo channel has different taps, and additionally, the left and right channels can cross-over between each other. There is also feedback control, which turns the diffuser into an exponentially decaying basic reverb.
 
 ## Controls Explained
-+ list
-+ of
-+ parameter
-+ names: and short descriptions for each one of them
++ Length: length of the diffusion (controls the number of delay taps)
++ Crossover: amount of crossover between left and right channels
++ Feedback: amount of feedback around the diffuser
++ Dry/wet: controls the mix between the unprocessed (dry) and processed (wet) signals.
 
 ## Extra Info for Nerds
 \< long description goes here \>
 
-
-# Changelist
-
-## \< semVer number \>
-- Added: new features
-- Modified: breaking changes to old features
-- Removed: removed old features
-- Fixed: non-breaking fixes to bugs
-- Tweaked: non-breaking non-functional changes to old features, i.e. improved quality
-
 # Known Bugs
 For a detailed list, see the [issues]() tab.
-- list
-- of
-- bugs, with short descriptions
